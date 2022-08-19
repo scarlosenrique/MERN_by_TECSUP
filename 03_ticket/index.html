@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Reto03</title>
+</head>
+<body>
+
+<main>
+    <!-- START Container-->
+    <div class="container">
+        <div class="row">
+            <header>
+                <img src="/assets/img/codigo-logo.png" alt="Codigo_Logo" id="codigo">
+                <h1 id="boleteria"> Boletería</h1>
+            </header>
+    <!-- FORMULARIO -->
+            <div class="form">
+                        <h3 id="datos">Datos del Comprador</h3>
+                        <br>
+    <!--NOMBRE Y APELLIDO -->
+                        <div class="input-group">
+                            <span class="input-group-text col-2">Nombre</span>
+                            <input id="nombre" type="text" aria-label="First name" class="form-control col-4" placeholder="Nombre y Apellido" onkeyup="nombreOnKeyUp(this)">
+                        </div>
+                        <br>
+    <!-- EDAD -->
+                        <div class="input-group mb-3">
+                            <label class="input-group-text col-2" for="inputGroupSelect01" > Edad </label>
+                            <select class="form-select" id="inputGroupSelect01" onchange="edadSelected(this)">
+                            <!-- <option selected>Selecciona...</option> -->
+                            <option value="11">Menor de 12</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="17">17</option>
+                            <option selected value="18">18</option>
+                            <option value="19">19-25</option>
+                            <option value="26">26-35</option>
+                            <option value="36">36-40</option>
+                            <option value="41">41-50</option>
+                            <option value="51">51-60</option>
+                            <option value="61">Mayor de 60</option>                        
+                            </select>
+                        </div>
+    <!--ESTUDIANTE OPCION-->
+                        <div class="row">
+                            <div class="col-sd-3 col-md-4">
+                                <h3 > Estudiante</h3>
+                            </div>
+                            <div class="col-sd-3 col-md-4">
+                            <div class="form-check form-check-inline ">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="SI" onclick="estChecked(this)">
+                                <label class="form-check-label" for="inlineRadio1">Si</label>
+                            </div>
+                            </div>
+                            <div class="col-sd-3 col-md-4">
+                            <div class="form-check form-check-inline ">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="NO" onclick="estChecked(this)">
+                                <label class="form-check-label" for="inlineRadio2" checked="checked" >No</label>
+                            </div>
+                            </div>
+                        </div>
+    <!-- OBRA Select-->
+                        <div class="row">
+                            <div class="col-6 col-sd-4 col-md-4">
+                                <h3> Obra </h3>
+                            </div>
+                            <div class="col-6 col-sd-8 col-md-8">
+                                <select class="form-select" aria-label="Default select example"  onchange="obraSelected(this)">
+                                    <option value="The Matrix">"The Matrix"</option>
+                                    <option value="Lo que los Coders Callamos">"Lo que los coder callamos"</option>
+                                    <option value="Los Coders Tambien lloran">"Los coders tambien lloran"</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+    <!-- OPCION TC  -->
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1" onclick="tc_Checked(this)">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Compra con TC
+                            </label>
+                        </div>
+                        <br>
+    <!-- BOTON realizar compra -->
+                        <button type="button" class="btn btn-danger" id="btn_comprar" onclick="comprar(this)"> Realizar  Compra </button>
+                        <br>
+                        <hr> 
+    <!-- DATOS de LA COMPRA -->
+                        <div class="ticket">
+                            <div class="datos_compra">
+                                <h4>Ticket -- Datos de Compra</h4>
+                                <p> Nombres : <span id="tk_nombre"></span></p>
+                                <p> Edad  : <span id="tk_edad"></span></p>
+                                <p>Estudiante  : <span id="tk_estudiante"> </span> </p>
+                                <p><i class="bi-credit-card" style="font-size: 1rem; color: cornflowerblue;"></i> Tarjeta  :<span id="tk_tc"> </span></p>
+                                <p> Obra  :  <span id="tk_obra"></span></p>
+                                <p> Costo : S/. <span id="tk_costo"></span></p>
+                            </div>
+                        </div>
+                        <br>
+            </div>
+
+    <!-- END FORMULARIO -->
+            <hr>
+<!-- Modal -->
+<!-- fin del Modal-->
+
+        </div> <!--- END ROW -->
+    </div>
+    <!-- END container-->
+    
+</main>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+body {
+    margin: 5px;
+    padding: 5px;
+    background-color: cornflowerblue;
+    font-family: 'Segoe UI', Roboto;    
+    
+}
+.header {
+    margin: 5px;
+    padding: 5px;
+    height: 200px;
+    width: auto;
+    border-style: ridge;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: url("/assets/img/banner0.jpeg");
+}
+
+.contenedor {
+    display: block;
+}
+
+.wrapper {
+    margin: 10px;
+    padding: 10px;
+}
+
+.nav {
+    margin: 5px;
+    padding: 5px;
+    background-color:whitesmoke;
+    background-image: url("/assets/img/bg_electron.jpg");
+    width: auto;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size:large;
+    font-weight: bolder;
+    border-style: ridge;
+    display: flex;
+    opacity: 0.95;
+}
+nav.me{
+    margin: 5px;
+    padding: 5px;
+    
+}
+
+span {
+    color:purple;
+    font-family: sans-serif;
+
+}
+
+img.foto_me{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.main {
+    display: flexbox;
+    padding: 5px;
+    margin: 5px;
+    border-style: ridge;
+}
+
+.card {
+    display: flex;
+    border-style: ridge;
+    background-color:whitesmoke;
+}
+.card h3 {
+    padding: 5px;
+    margin: 5px;
+    width: 20%;
+}
+
+.card .img_card {
+    width: 100px;
+    height: 100px;
+    margin: 3px;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+p {
+    margin: 3px 15px 15px 15px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 10%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
