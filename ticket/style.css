@@ -1,0 +1,60 @@
+main {
+    background-color: whitesmoke;
+}
+
+header {
+    background-color: white;
+    z-index: 0;
+}
+
+.row {
+    display:flex;
+    padding: 5px;
+}
+
+#codigo {
+    padding: 10px;
+}
+
+#boleteria {
+    align-content: space-between;
+    background-color:#78b1ba;
+    text-align:center;
+}
+
+#datos {
+    padding: 20px;
+    background-color:#78b1ba;
+    text-align:center;
+    
+}
+
+.container {
+    border-color: aliceblue;
+    padding: 20px 20px 20px 20px;
+    margin: 10px 10px 10px 10px;
+    background-color:#78b1ba
+}
+
+.form {
+    /* border-radius: 0 0 3% 3%; */
+    border-color: aliceblue;
+    background-color: antiquewhite;
+}
+
+.ticket {
+    border-style: dashed;
+    padding: 5px;
+    background-image: url(/assets/img/ticket1_bg.PNG);
+    height: 280px;
+    width: 420;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.datos_compra {
+    padding: 5px 0 0 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+
+}

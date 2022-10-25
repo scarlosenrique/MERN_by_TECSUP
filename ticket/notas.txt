@@ -1,0 +1,13 @@
+pagina Codigo by tecsup
+
+colores:
+
+#ECECEC  : fondo gris (claro)
+#c2c2cd  : color de letras sobre fondo gris
+#2e2655  : color morado oscuro
+#12a5bc  : turquesa oscuro
+#e11661  : rojo vino (color del boton)
+#33455c  : ver oscuro con morado
+#6f4269  : violeta oscuro
+#4f1144  : violeta mas oscuro que el anterior
+#3e4463  : azul morado oscuro
