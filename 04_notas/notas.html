@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>PROMEDIOS</title>
+    <!-- <link rel='stylesheet' href='style.css'> -->
+    <!-- CSS only -->
+    <!-- <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx' crossorigin='anonymous'> -->
+</head>
+<!-- 
+    Hola! aquí está el nuevo reto de la semana.
+
+1.- Implementa una aplicación de registro de notas que consta de dos calificaciones en 
+el rango del 1 al 20 para la siguiente lista de 4 alumnos:
+Juan Soto, Sofía Pérez, Miguel Nuñez y Pablo Silva.
+
+2.- La aplicación debería solicitar el ingreso de las dos notas (una por una) 
+de cada alumno previamente almacenado (la lista debe guardarse en un arreglo).
+
+3.- Luego se debe mostrar (por consola) la lista de los registros que tendrá 
+los 4 alumnos y sus 2 notas respectivamente ingresadas.
+
+4.- En base a la lista anterior (registros), se debe construir y mostrar una lista de promedios, 
+donde se muestra el promedio y el estado (aprobado o desaprobado) por alumno. 
+Un alumno se considera desaprobado si su promedio es inferior a 13.
+
+5.- Finalmente, deberás construir un objeto de estados en base a la lista anterior (promedios),
+que contendrá las dos listas de aprobados y desaprobados, cada lista debe contener los 
+nombres de los alumnos y sus promedios respectivos.
+Para la solución del problema se plantea el siguiente código inicial:
+-->
+<body>
+    <h1>RETO 04 - NOTAS</h1>
+    <script>
+        // Datos iniciales
+        let alumnos = ['Juan Soto', 'Sofía Pérez', 'Miguel Nuñez', 'Pablo Silva'];
+        let registros = [];
+        let promedios = [];
+        let estados = {
+            "Aprobados": [],
+            "Desaprobados": []
+        };
+        
+        // Solicitar las notas por alumno
+        //Aquí va tu código:
+        alumnos.forEach(alumno => {
+            nota1 = parseInt(prompt("Ingrese la nota 1 de "+ alumno));
+            nota2 = parseInt(prompt("Ingrese la nota 2 de "+ alumno));
+            registros.push({'Alumno': alumno, 'nota1':nota1, 'nota2': nota2})
+        })
+        console.log(registros);
+
+
+        // Obtener los promedios de la lista de registros
+        //Aquí va tu código:
+        registros.forEach(student =>{
+            alum = student.Alumno;
+            prom = (student.nota1 + student.nota2)/2;
+            estado = '';
+
+            if (prom < 13){
+                estado = "desaprobado";
+            } else {
+                estado = "aprobado";
+            }
+
+            promedios.push({'Estudiante': alum, 'Promedio': prom, 'Estado': estado});
+        })
+        console.log(promedios);
+
+
+        //Obtener la lista de cantidad de alumnos aprobados y desaprobados
+        //Aquí va tu código:
+        promedios.forEach(item =>{
+            if(item.Estado == 'aprobado'){
+                estados.Aprobados.push(item);
+            }else{
+                estados.Desaprobados.push(item);
+            }
+        })
+
+        console.log(estados);
+        
+        </script>
+
+    <!--- JavaScript Bundle with Popper --->
+    <!-- <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa' crossorigin='anonymous'></script> -->
+   <!-- <script src='/js/app.js'></script> */ -->
+</body>
+</html>
