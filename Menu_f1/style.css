@@ -8,7 +8,7 @@
     --primaryColor: #00b8ff;
     --colorHover: #3bc9ff;
     --sizeButton: 60px;
-    --sizeicons: 25px;
+    --sizeIcons: 25px;
     --widthContent: 200px;
     --heightContent: 130px;	
 }
@@ -55,10 +55,12 @@ body{
     border-radius: 50%;
     bottom: 0;
     left: 70px;
+    transition: transform 300ms;
 }
 
 .menu-item img{
     width: var(--sizeIcons);
+    transition: transform 300ms;
 }
 
 .menu-item:hover{
@@ -67,6 +69,22 @@ body{
 
 #menu{
     z-index: 10;
+}
+
+.menu-active .menu-item:nth-child(2){
+    transform: translateX(-70px);
+}
+
+.menu-active .menu-item:nth-child(3){
+    transform: translateY(-70px);
+
+}
+.menu-active .menu-item:nth-child(4){
+    transform: translateX(70px);
+}
+
+.menu-active #menu img {
+    transform: rotate(45deg);
 }
 
 
