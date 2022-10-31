@@ -1,11 +1,10 @@
-
 /* getting Elements */
 const nav = document.querySelector("nav");
     toggleBtn = nav.querySelector(".toggle-btn");
 
 toggleBtn.addEventListener("click" , () =>{
-    nav.classList.toggle("open")
-})
+    nav.classList.toggle("open");
+});
 
 /*  Js code to make draggable nav */
 function onDrag({movementY}) {  //movementY gest mouse vertical value
@@ -14,23 +13,23 @@ function onDrag({movementY}) {  //movementY gest mouse vertical value
         navHeight = parseInt(navStyle.height),// getting nav height value & convert it number to number
         windHeight = window.innerHeight; // getting window height
 
-/*     nav.style.top = navtop > 0 ? '{navTop + movementY}px' : "1px";
-    if(navTop > windheight -navHeight){
-        nav.style.top = ' ${windHeight - navHeight}px';
-    } */
-
-    console.log(movementY);
+    nav.style.top = navTop > 0 ? `${navTop + movementY}px` : "1px";
+    if(navTop > windHeight - navHeight){
+        nav.style.top = `${windHeight - navHeight}px`;
+    }  
 }
 
-
+/* this function will call when user click mouse's button and  move mouse on nav */
 nav.addEventListener("mousedown", () =>{
     nav.addEventListener("mousemove", onDrag);
-})
+ /*    console.log("estoy mouse abajo"); */
+});
 
+/* these function will call when user relase mouse button and leave mouse from nav */
 nav.addEventListener("mouseup", () =>{
     nav.removeEventListener("mousemove", onDrag);
-})
+});
 
 nav.addEventListener("mouseleave", () =>{
-    nav.addEventListener("mousemove", onDrag);
-})
+    nav.removeEventListener("mousemove", onDrag);
+});

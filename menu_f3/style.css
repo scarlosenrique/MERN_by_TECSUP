@@ -13,10 +13,10 @@ body{
 nav{
     position: absolute;
     top: 20px;
-    right: 0px;
+    right: 5px;
     width: 80px;
-    background: red;
     height: 300px;
+    /* background: red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,7 +38,7 @@ nav .nav-content{
     align-items: center;
     justify-content:center;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 0,0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 .nav-content .toggle-btn{
@@ -51,16 +51,18 @@ nav .nav-content{
 }
 
 nav.open .toggle-btn{
-
+    transform: rotate(0deg);
 }
 
 .nav-content span{
     position: absolute;
     transition: all 0.6s ease;
+    opacity: 0;
 }
 
 nav.open .nav-content span{
     transform: rotate(calc(var(--i) * (360deg/8))) translateY(120px);
+    opacity: 1;
 }
 
 .nav-content span a{
