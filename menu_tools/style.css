@@ -32,8 +32,8 @@ nav .nav-content{
 
 .nav-content .toggle-btn,
 .nav-content span a{
-    height: 64px;
-    width: 64px;
+    height: 68px;
+    width: 68px;
     background: #fff;
     display:flex;
     align-items: center;
@@ -83,9 +83,9 @@ nav.open .nav-content span{
 
 .nav-content span a{
     text-decoration: none;
-    transform: rotate(45deg);
+    transform: rotate(70deg);
 }
-.nav-content span a i{
+.nav-content span a img{
     font-size: 32px;
     color: #077ec3;
     transform: rotate(calc(var(--i) * (360deg/-8)));
